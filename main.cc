@@ -82,8 +82,10 @@ public:
     int b = 0;
 
     while(running_){
-    	matrix_ -> SetPixel(x, y, 0, 0, 0); //Turn off previously turned on LED
+
     	usleep(5000);
+
+    	matrix_ -> SetPixel(x, y, 0, 0, 0); //Turn off previously turned on LED
 
     	//pick a random LED
     	x = rand() % width;
