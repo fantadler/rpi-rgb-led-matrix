@@ -75,22 +75,26 @@ public:
   void Run() {
     const int width = matrix_->width();
     const int height = matrix_->height();
-    int x;
-    int y;
-    int r;
-    int g;
-    int b;
+    int x = 0;
+    int y = 0;
+    int r = 0;
+    int g = 0;
+    int b = 0;
 
     while(running_){
+    	matrix_ -> SetPixel(x, y, 0, 0, 0); //Turn off previously turned on LED
     	usleep(5000);
+
+    	//pick a random LED
     	x = rand() % width;
     	y = rand() % height;
 
+    	//generate a random RGB color
     	r = rand() % 254;
     	g = rand() % 254;
     	b = rand() % 254;
 
-    	matrix_ -> SetPixel(x, y, r, g, b);
+    	matrix_ -> SetPixel(x, y, r, g, b); // Turn on the LED with the random color at a random location
     }
   }
 };
