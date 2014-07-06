@@ -83,7 +83,7 @@ public:
 
     while(running_){
 
-    	usleep(50000);
+    	usleep(500000);
 
     	matrix_ -> SetPixel(x, y, 0, 0, 0); //Turn off previously turned on LED
 
