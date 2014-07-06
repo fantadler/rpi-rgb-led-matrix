@@ -83,7 +83,7 @@ public:
 
     while(running_){
 
-    	usleep(5000);
+    	usleep(50000);
 
     	matrix_ -> SetPixel(x, y, 0, 0, 0); //Turn off previously turned on LED
 
@@ -92,9 +92,9 @@ public:
     	y = rand() % height;
 
     	//generate a random RGB color
-    	r = rand() % 254;
-    	g = rand() % 254;
-    	b = rand() % 254;
+    	r = rand() % 255;
+    	g = rand() % 255;
+    	b = rand() % 255;
 
     	matrix_ -> SetPixel(x, y, r, g, b); // Turn on the LED with the random color at a random location
     }
